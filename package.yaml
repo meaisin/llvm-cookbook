@@ -1,0 +1,40 @@
+name:                llvm-cookbook
+version:             0.1.0.0
+github:              "meaisin/llvm-cookbook"
+license:             BSD3
+author:              "Austin Theis-Pickford"
+maintainer:          "atpdev24@gmail.com"
+copyright:           "2022 Austin Theis-Pickford"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/githubuser/llvm-cookbook#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- llvm-hs >= 9.0 && < 9.1
+
+executables: 
+    Empty:
+        main:                Main.hs
+        source-dirs:         empty
+        ghc-options:
+        - -threaded
+        - -rtsopts
+        - -with-rtsopts=-N
+        dependencies:
+        - base
+        - bytestring
+        - llvm-hs
+        - llvm-hs-pure
+        - mtl
+        - text
