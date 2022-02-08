@@ -68,3 +68,19 @@ executables:
         - llvm-hs-pure
         - mtl
         - text
+
+
+    IfMult:
+        main:                Main.hs
+        source-dirs:         ifmult
+        ghc-options:
+        - -threaded
+        - -rtsopts
+        - -with-rtsopts=-N
+        dependencies:
+        - base
+        - bytestring
+        - llvm-hs
+        - llvm-hs-pure
+        - mtl
+        - text
