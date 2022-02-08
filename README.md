@@ -20,4 +20,4 @@ Here are the instructions for getting LLVM-9.0.0 set up so that you can use `llv
 7. Once it has built, issue this command to install the tools and libraries: `cmake --build . --config Release --target install`
 8. You will get an error near the end of this process, it will mention `ocamldocs`. To fix this, go to `docs/cmake_install.cmake`, comment out the lines after 44, all of them.
 9. Run the install command again. It _should_ work this time. But, if you try and build and run one of the examples, for instance, in llvm-hs-examples, you'll get linker errors. This is because the libraries were installed to `/usr/local/lib/...`. You need to make sure these can be found. Export a variable like so: `export LD_LIBRARY_PATH=/usr/local/lib/`.
-10. At this point, everytinh _should_ work. You can build and run the examples in llvm-hs-examples. 
+10. At this point, everything _should_ work. You can build and run the examples in llvm-hs-examples. 
